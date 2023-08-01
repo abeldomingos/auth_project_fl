@@ -30,16 +30,38 @@ class _LoginScrennState extends State<LoginScrenn> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: Form(
-        key: _formKey,
-        child: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextFormField(
-                  controller: _emailController,
-                  validator: (value) => value!.isEmpty ? 'Entrar com email valido ' : null,
-                ),
-              ],
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Form(
+          key: _formKey,
+          child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextFormField(
+                    controller: _emailController,
+                    validator: (value) => value!.isEmpty ? 'Entrar com email valido ' : null,
+                  ),
+                  SizedBox(height: 15,),
+
+                  TextFormField(
+                    controller: _passwordController,
+                    validator: (value) => value!.isEmpty ? 'Entrar com a senha ' : null,
+                  ),
+                  SizedBox(height: 15,),
+
+                 Container(
+                   width: MediaQuery.of(context).size.width -25,
+                   height: 40,
+                   decoration: BoxDecoration(
+                     color: Colors.blue
+                   ),
+                   child:  TextButton(
+                     onPressed: (){},
+                     child: Text('Login', style: TextStyle(fontSize: 18, color: Colors.white),),
+                   ),
+                 ),
+                ],
+          ),
         ),
       ),
     );

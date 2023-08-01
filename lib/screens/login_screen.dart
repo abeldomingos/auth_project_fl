@@ -56,7 +56,11 @@ class _LoginScrennState extends State<LoginScrenn> {
                      color: Colors.blue
                    ),
                    child:  TextButton(
-                     onPressed: (){},
+                     onPressed: (){
+                       if(_formKey.currentState!.validate()){
+                         print('Ok');
+                       }
+                     },
                      child: Text('Login', style: TextStyle(fontSize: 18, color: Colors.white),),
                    ),
                  ),

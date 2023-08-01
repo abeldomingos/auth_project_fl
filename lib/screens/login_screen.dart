@@ -41,7 +41,7 @@ class _LoginScrennState extends State<LoginScrenn> {
                     controller: _emailController,
                     validator: (value) => value!.isEmpty ? 'Entrar com email valido ' : null,
                   ),
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
 
                   TextFormField(
                     controller: _passwordController,
@@ -52,7 +52,7 @@ class _LoginScrennState extends State<LoginScrenn> {
                  Container(
                    width: MediaQuery.of(context).size.width -25,
                    height: 40,
-                   decoration: BoxDecoration(
+                   decoration: const BoxDecoration(
                      color: Colors.blue
                    ),
                    child:  TextButton(
